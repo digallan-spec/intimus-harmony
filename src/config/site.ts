@@ -101,7 +101,7 @@ export const siteConfig = {
   },
 
   specialist: {
-    name: "Jessyca B. Gallani",
+    name: "Dra. Jessyca B. Gallani",
     /**
      * Preencher somente após confirmação oficial via NEXT_PUBLIC_PROFESSIONAL_REGISTRY
      * ou diretamente aqui antes da publicação.
