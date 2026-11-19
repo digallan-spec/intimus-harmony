@@ -108,9 +108,9 @@ export const siteConfig = {
      */
     professionalRegistry: process.env.NEXT_PUBLIC_PROFESSIONAL_REGISTRY || "",
     /**
-     * Fotografia profissional oficial da Dra. Jessyca B. Gallani em /public/images/dra-jessyca-jeh.jpg.
+     * Fotografia profissional oficial de Jessyca B. Gallani em /public/images/jessyca-gallani.jpg.
      */
-    photoSrc: "/images/dra-jessyca-jeh.jpg" as string | undefined,
+    photoSrc: "/images/jessyca-gallani.jpg" as string | undefined,
     photoWidth: 682,
     photoHeight: 1024,
   },
