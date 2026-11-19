@@ -82,6 +82,22 @@ export function FaqSection() {
                   <p className="font-sans text-[14.5px] leading-[1.7] text-umana-slate sm:text-[15px]">
                     {item.answer}
                   </p>
+                  {item.bullets && item.bullets.length > 0 && (
+                    <ul className="mt-3 space-y-2 pl-1">
+                      {item.bullets.map((bullet) => (
+                        <li
+                          key={bullet}
+                          className="flex items-start gap-2.5 font-sans text-[14px] leading-relaxed text-umana-ink/90 sm:text-[14.5px]"
+                        >
+                          <span
+                            aria-hidden="true"
+                            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-umana-gold"
+                          />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             );

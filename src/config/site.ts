@@ -5,11 +5,15 @@ export interface ResultCase {
   authorized: boolean;
   /** True enquanto exibir imagem editorial provisória antes das fotos clínicas reais */
   isIllustrativePreview?: boolean;
-  /** Imagem única já composta lado a lado (Antes e Depois) */
+  /** Imagem única já composta lado a lado (Antes e Depois) ou comparativo imediato */
   combinedSrc?: string;
   combinedWidth?: number;
   combinedHeight?: number;
   combinedAlt?: string;
+  /** Exibe legenda "Antes / Depois" em duas colunas abaixo da imagem (padrão: true) */
+  showBeforeAfterLabels?: boolean;
+  /** Legenda única centralizada quando showBeforeAfterLabels for false */
+  singleLabel?: string;
   /** Caminho em /public/images/results/... quando fornecido em arquivos separados */
   beforeSrc?: string;
   /** Caminho em /public/images/results/... quando fornecido em arquivos separados */
@@ -104,12 +108,11 @@ export const siteConfig = {
      */
     professionalRegistry: process.env.NEXT_PUBLIC_PROFESSIONAL_REGISTRY || "",
     /**
-     * Imagem ilustrativa provisória em /public/images/jessyca-gallani.jpg.
-     * Substituir pela fotografia profissional oficial de Jessyca B. Gallani antes da publicação.
+     * Fotografia profissional oficial de Jessyca B. Gallani em /public/images/jessyca-gallani.jpg.
      */
     photoSrc: "/images/jessyca-gallani.jpg" as string | undefined,
-    photoWidth: 900,
-    photoHeight: 1200,
+    photoWidth: 682,
+    photoHeight: 1024,
   },
 
   media: {

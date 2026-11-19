@@ -115,10 +115,16 @@ export function ResultsGallerySection() {
                   className="h-auto max-h-[520px] w-full object-contain"
                 />
               </div>
-              <figcaption className="mt-3 grid w-full grid-cols-2 text-center font-sans text-xs font-semibold uppercase tracking-editorial">
-                <span className="text-umana-slate">Antes</span>
-                <span className="text-umana-gold-deep">Depois</span>
-              </figcaption>
+              {activeCase.showBeforeAfterLabels === false ? (
+                <figcaption className="mt-3 text-center font-sans text-xs font-semibold uppercase tracking-editorial text-umana-gold-deep">
+                  {activeCase.singleLabel || "Comparativo imediato"}
+                </figcaption>
+              ) : (
+                <figcaption className="mt-3 grid w-full grid-cols-2 text-center font-sans text-xs font-semibold uppercase tracking-editorial">
+                  <span className="text-umana-slate">Antes</span>
+                  <span className="text-umana-gold-deep">Depois</span>
+                </figcaption>
+              )}
             </figure>
           ) : hasSplitImages ? (
             <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">

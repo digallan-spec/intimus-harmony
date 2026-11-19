@@ -28,7 +28,7 @@ export function SpecialistSection() {
                 <div className="relative overflow-hidden rounded-[20px] bg-umana-ice-soft shadow-editorial">
                   <Image
                     src={photoSrc}
-                    alt={`Fotografia ilustrativa provisória de ${specialist.name}`}
+                    alt={`Fotografia profissional oficial de ${specialist.name}`}
                     width={photoWidth}
                     height={photoHeight}
                     loading="lazy"

@@ -69,8 +69,8 @@ export function SocialProofSection() {
           <GoogleRatingBadge variant="card" />
         </div>
 
-        {/* Desktop: grade elegante de 3 colunas sem cortar os prints */}
-        <div className="mt-7 hidden gap-5 md:grid md:grid-cols-3">
+        {/* Desktop: grade elegante sem cortar os prints */}
+        <div className="mt-7 hidden gap-5 md:grid md:grid-cols-2 lg:grid-cols-4">
           {items.map((item, idx) => (
             <article
               key={item.id}

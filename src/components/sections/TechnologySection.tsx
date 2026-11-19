@@ -28,6 +28,15 @@ export function TechnologySection() {
           <p className="mt-3 font-sans text-[15px] leading-[1.7] text-umana-slate sm:text-base">
             {technology.complement}
           </p>
+
+          <div className="mt-5 rounded-2xl border border-umana-gold/35 bg-white/95 px-5 py-4 shadow-editorial-sm">
+            <p className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-umana-gold-deep">
+              {technology.procedureTarget.label}
+            </p>
+            <p className="mt-1.5 font-sans text-sm leading-relaxed text-umana-navy sm:text-[15px]">
+              {technology.procedureTarget.description}
+            </p>
+          </div>
         </div>
 
         {/* Três situações principais em cards limpos */}

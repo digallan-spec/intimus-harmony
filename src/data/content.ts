@@ -4,6 +4,7 @@ export interface FaqItem {
   id: string;
   question: string;
   answer: string;
+  bullets?: string[];
   requiresComplianceReview?: boolean;
 }
 
@@ -24,6 +25,11 @@ export const landingContent = {
     lead: "A evolução tecnológica trouxe novas alternativas para quem deseja melhorar a firmeza da pele sem recorrer a uma mastopexia cirúrgica.",
     complement:
       "O Intimus Harmony reúne endolaser e criolipólise em um protocolo exclusivo desenvolvido na Clínica Umana.",
+    procedureTarget: {
+      label: "Sobre o procedimento",
+      description:
+        "O alvo do procedimento é exclusivamente a pele na camada da derme papilar (extremamente superficial) e os tecidos de sustentação da mama.",
+    },
     situations: [
       {
         id: "amamentacao",
@@ -113,6 +119,59 @@ export const landingContent = {
         combinedWidth: 1024,
         combinedHeight: 567,
         combinedAlt: "Resultado real de antes e depois do protocolo Intimus Harmony — Caso 02",
+        showBeforeAfterLabels: true,
+      },
+      {
+        id: "caso-03",
+        label: "Caso 03 — Comparativo imediato",
+        caption: "Comparativo imediato durante a sessão: lado tratado vs. lado ainda não tratado.",
+        authorized: true,
+        isIllustrativePreview: false,
+        combinedSrc: "/images/results/caso-03-comparativo.jpg",
+        combinedWidth: 782,
+        combinedHeight: 1024,
+        combinedAlt: "Comparativo imediato entre lado tratado e lado não tratado — Caso 03",
+        showBeforeAfterLabels: false,
+        singleLabel: "Comparativo imediato • Lado tratado vs. lado não tratado",
+      },
+      {
+        id: "caso-04",
+        label: "Caso 04 — Comparativo imediato",
+        caption: "Comparativo imediato durante a sessão: lado tratado vs. lado ainda não tratado.",
+        authorized: true,
+        isIllustrativePreview: false,
+        combinedSrc: "/images/results/caso-04-comparativo.jpg",
+        combinedWidth: 1024,
+        combinedHeight: 837,
+        combinedAlt: "Comparativo imediato entre lado tratado e lado não tratado — Caso 04",
+        showBeforeAfterLabels: false,
+        singleLabel: "Comparativo imediato • Lado tratado vs. lado não tratado",
+      },
+      {
+        id: "caso-05",
+        label: "Caso 05 — Comparativo imediato",
+        caption: "Comparativo imediato durante a sessão: lado tratado vs. lado ainda não tratado.",
+        authorized: true,
+        isIllustrativePreview: false,
+        combinedSrc: "/images/results/caso-05-comparativo.jpg",
+        combinedWidth: 576,
+        combinedHeight: 1024,
+        combinedAlt: "Comparativo imediato entre lado tratado e lado não tratado — Caso 05",
+        showBeforeAfterLabels: false,
+        singleLabel: "Comparativo imediato • Lado tratado vs. lado não tratado",
+      },
+      {
+        id: "caso-06",
+        label: "Caso 06 — Antes e pós imediato",
+        caption: "Comparativo antes e pós imediato de um lado durante o protocolo Intimus Harmony.",
+        authorized: true,
+        isIllustrativePreview: false,
+        combinedSrc: "/images/results/caso-06-comparativo.jpg",
+        combinedWidth: 576,
+        combinedHeight: 1024,
+        combinedAlt: "Comparativo antes e pós imediato do protocolo Intimus Harmony — Caso 06",
+        showBeforeAfterLabels: false,
+        singleLabel: "Antes (acima) • Pós imediato de um lado (abaixo)",
       },
     ] as ResultCase[],
   },
@@ -121,7 +180,7 @@ export const landingContent = {
     eyebrow: "Prova Social",
     title: "O que nossas pacientes dizem.",
     subtitle:
-      "Relatos reais enviados por pacientes no WhatsApp e avaliação 4,9 estrelas no Google.",
+      "Relatos reais enviados por pacientes no WhatsApp e Instagram, além da avaliação 4,9 estrelas no Google.",
     testimonials: [
       {
         id: "dep-01",
@@ -146,6 +205,14 @@ export const landingContent = {
         width: 692,
         height: 1024,
         alt: "Print de conversa real no WhatsApp de paciente elogiando o resultado e o atendimento da equipe e da Dra. Jessyca",
+      },
+      {
+        id: "dep-04",
+        label: "Depoimento real • Instagram",
+        src: "/images/testimonials/depoimento-04.jpg",
+        width: 709,
+        height: 1024,
+        alt: "Comentário real no Instagram de paciente elogiando a recuperação sem dor e o resultado do procedimento na Clínica Umana",
       },
     ] as TestimonialPrint[],
   },
@@ -180,6 +247,24 @@ export const landingContent = {
         question: "Quando aparecem os resultados?",
         answer:
           "A evolução é gradual, com acompanhamento por volta de 90 dias. Os resultados variam de pessoa para pessoa.",
+      },
+      {
+        id: "pele-enrugada",
+        question: "A pele vai ficar enrugada assim?",
+        answer:
+          "Logo após o laser, ocorre uma retração inicial da pele, que pode ser visível no pós-imediato. A firmeza e o aspecto da pele evoluem ao longo das semanas, e a avaliação do resultado costuma ser mais representativa entre 60 e 90 dias.",
+      },
+      {
+        id: "contraindicacoes",
+        question: "Quais são as contraindicações?",
+        answer:
+          "O procedimento não é indicado nas situações abaixo (a liberação depende sempre da avaliação individual):",
+        bullets: [
+          "Gestação ou amamentação.",
+          "Infecção ou inflamação ativa na mama.",
+          "Nódulo, secreção pelo mamilo, retração, dor localizada ou alteração mamária recente.",
+          "Histórico pessoal ou familiar de câncer de mama.",
+        ],
       },
       {
         id: "investimento",
