@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * FONTE OFICIAL QAFINTE (Clínica Umana)
+ * Quando receber os arquivos licenciados, copie-os para /public/fonts/
+ * e descomente o bloco abaixo para ativar Qafinte automaticamente em todos os títulos.
+ *
+ * @font-face {
+ *   font-family: "Qafinte";
+ *   src: url("/fonts/Qafinte-Regular.woff2") format("woff2");
+ *   font-weight: 400 600;
+ *   font-style: normal;
+ *   font-display: swap;
+ * }
+ */
+
+:root {
+  /* Altere para "Qafinte" assim que o arquivo licenciado for adicionado em /public/fonts/ */
+  --font-qafinte: var(--font-display-fallback);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: clip;
+    background-color: #ffffff;
+    color: #1a2236;
+  }
+
+  ::selection {
+    background-color: rgba(204, 166, 72, 0.25);
+    color: #091638;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
